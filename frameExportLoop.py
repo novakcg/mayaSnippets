@@ -2,6 +2,9 @@
 
 import maya.cmds as cmds
 
-for i in range(0, 140):
+fStart = 0
+fEnd   = 120
+
+for i in range(fStart, fEnd):
     cmds.currentTime(i)
     cmds.setAttr("OpenVDBWrite.VdbFilePath", 'X:/Frame.'+(i.zfill(3))+"001.vdb', type="string")
